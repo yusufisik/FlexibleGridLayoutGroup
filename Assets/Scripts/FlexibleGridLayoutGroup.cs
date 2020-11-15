@@ -29,7 +29,27 @@ public class FlexibleGridLayoutGroup : LayoutGroup
     {
         base.CalculateLayoutInputHorizontal();
 
-        if(fitType == FitType.Width || fitType == FitType.Height || fitType == FitType.Uniform)
+        Logic();
+
+    }
+    public override void CalculateLayoutInputVertical()
+    {
+        Logic();
+    }
+
+    public override void SetLayoutHorizontal()
+    {
+
+    }
+
+    public override void SetLayoutVertical()
+    {
+
+    }
+
+    private void Logic()
+    {
+        if (fitType == FitType.Width || fitType == FitType.Height || fitType == FitType.Uniform)
         {
             fitX = true;
             fitY = true;
@@ -73,20 +93,5 @@ public class FlexibleGridLayoutGroup : LayoutGroup
             SetChildAlongAxis(item, 0, xPos, cellSize.x);
             SetChildAlongAxis(item, 1, yPos, cellSize.y);
         }
-
-    }
-    public override void CalculateLayoutInputVertical()
-    {
-
-    }
-
-    public override void SetLayoutHorizontal()
-    {
-
-    }
-
-    public override void SetLayoutVertical()
-    {
-
     }
 }
