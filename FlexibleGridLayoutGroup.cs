@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace YusufISIK.Catalogue3D.CustomUIComponents
+namespace YusufISIK.CustomUIComponents
 {
     [AddComponentMenu("Layout/Flexible Grid Layout Group")]
     public class FlexibleGridLayoutGroup : LayoutGroup
